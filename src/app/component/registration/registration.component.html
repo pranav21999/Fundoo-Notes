@@ -1,3 +1,6 @@
+<!-- Registration page  -->
+
+
 <!-- parent container -->
 <!-- <div class="container" fxFlex=60 fxLayout="row" fxFlex.xs=100> -->
 <div class="container" fxLayout="row">
@@ -8,10 +11,10 @@
         <!-- headind div Fundoo -->
         <div>
             <div class="fundoo">
-            <div class="Project" *ngFor="let fontcolor of fontcolors,let i=index">
-                <h1 class="projectName" [style]=fontcolor>{{fonttexts[i]}}</h1>
+                <div class="Project" *ngFor="let fontcolor of fontcolors,let i=index">
+                    <h1 class="projectName" [style]=fontcolor>{{fonttexts[i]}}</h1>
+                </div>
             </div>
-        </div>
 
             <span class="heading"> create your google account</span>
 
@@ -51,8 +54,7 @@
                         </mat-form-field>
                     </div>
 
-                    <!-- <div class="password-container" fxLayout="row" fxLayoutGap="20px" fxFlex.xs=100 fxLayout.xs="column"
-                        fxLayoutGap.xs="0px"> -->
+                    <!-- password -->
 
                     <div class="password-container" fxLayout="row" fxLayoutGap="20px">
 
@@ -107,8 +109,8 @@
     </div>
     <div class="container-img" fxHide.xs fxLayout="column" fxFlexAlign="auto" fxLayoutAlign="center center">
         <div class="logo" style="padding-right: 15%;">
-            <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244" height="244"
-                class="j9NuTc TrZEUc">
+            <img class="image1" src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244"
+                height="244" class="j9NuTc TrZEUc">
             <p class="img-caption">One Account. All Of Fundoo<br>Working For You.</p>
         </div>
 
