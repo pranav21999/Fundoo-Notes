@@ -11,6 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class RegistrationComponent implements OnInit {
 
+  //adding colour to fundoo
   fontcolors = ['color:#800080', 'color:#FBBC04', 'color:#f28b82', 'color:#fbbc04', 'color:#fff475']
   fonttexts = ['F', 'u', 'n', 'd', 'o', 'o']
   RegistrationForm!: FormGroup;
@@ -19,7 +20,7 @@ export class RegistrationComponent implements OnInit {
   hide: boolean = false;
 
   constructor(private fb: FormBuilder, private user: UserService, public snackBar: MatSnackBar) { }
-
+  //validations for form fields
   ngOnInit(): void {
     this.RegistrationForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
