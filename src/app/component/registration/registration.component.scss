@@ -1,0 +1,80 @@
+.container{
+  display: flex;
+  border:1px solid gray ;
+  margin: 6% auto;
+  padding: 4% 2%;
+  border-radius: 8px;
+  height: 95vh;
+  width: 60vw;
+  justify-content: space-around;
+}
+
+.fundoo{
+display: flex;
+flex-direction: row;
+}
+
+.heading{
+  font-size: 20px;
+}
+
+.password-container{
+ padding-top: 2%;
+}
+
+.button1{
+  color: #1a73e8;
+}
+.button2{
+  background-color: #1a73e8;
+  color: white;
+}
+
+.logo{
+  // margin-left: 50px;
+  height: 50%;
+}
+.img-caption{
+  font-weight: lighter;
+  font-size: 18px;
+  // margin-left: 50px;
+}
+
+a{
+  text-decoration: none;
+  color: #1a73e8; 
+}
+
+@media (max-width : 1100px)
+{
+  .container{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.image1{
+display: none;
+width: 50%;
+padding-right: 30px;
+}
+  .container-form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 599px) {
+  .container{
+      border:none;
+      padding: 4%;
+  }
+
+  .button-section{
+      margin-top: 10%;
+  }
+}
