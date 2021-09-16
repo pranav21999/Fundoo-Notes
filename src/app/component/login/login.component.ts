@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  //validation for login from fields
+
   loginForm: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(8)]],
@@ -54,19 +56,7 @@ export class LoginComponent implements OnInit {
             console.log(response);
             this.route.navigate(['home']);
           }
-          //     let data ={
-          //       "email":this.loginForm.controls.email.value
-          //     }
-          //     console.log(data);
-
-          //     if (this.loginForm.valid) {
-          //       return;
-          //       // console.log(data);
-          //     }
-          //      console.log(this.loginForm.value);
-          //   }
-          // }
-
+          
         );
     }
   }
