@@ -31,5 +31,6 @@ export class UserService {
     return this.httpService.Post("/user/reset-password", data, null, false);
   }
 
+  
 
 }

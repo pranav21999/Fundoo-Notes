@@ -15,12 +15,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
-// import {Routes} from '@angular/router';
-// import { RouterModule } from '@angular/router';
+//  import {Routes} from '@angular/router';
+//  import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
-
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list'; 
 // const appRoutes:Routes = [  
   // { path: "login", component: LoginComponent } ,
   // { path: "registration", component: RegistrationComponent } 
@@ -35,13 +39,17 @@ import { ResetPasswordComponent } from './component/reset-password/reset-passwor
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    DashboardComponent,
   ],
   imports: [
+    MatListModule,
     BrowserModule,
+    MatMenuModule,
     AppRoutingModule,
     MatIconModule,
     MatInputModule,
+    MatToolbarModule,
     MatFormFieldModule,
     MatCheckboxModule,
     MatButtonModule,
@@ -49,11 +57,12 @@ import { ResetPasswordComponent } from './component/reset-password/reset-passwor
     FlexLayoutModule,
     MatCardModule,
     ReactiveFormsModule,
+    MatSidenavModule ,
     // RouterModule.forRoot(appRoutes),
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

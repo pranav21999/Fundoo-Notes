@@ -15,7 +15,6 @@ export class ForgetPasswordComponent implements OnInit {
   ForgetPasswordForm!: FormGroup;
   submitted = false;
 
-
   constructor(private fb: FormBuilder, public route: Router, public snackBar: MatSnackBar, private user: UserService) { }
 
   ngOnInit(): void {
@@ -28,6 +27,7 @@ export class ForgetPasswordComponent implements OnInit {
 
   get f() { return this.ForgetPasswordForm.controls; }
 
+
   openSnackBar(message: string, duration: number) {
     let config = new MatSnackBarConfig();
     if (duration != 0) {
@@ -39,7 +39,7 @@ export class ForgetPasswordComponent implements OnInit {
   onsubmit() 
   {
     if (this.ForgetPasswordForm.value) {
-      this.openSnackBar('Processing', 2000);
+      this.openSnackBar('Processing', 1000);
       let reqData = {
         email: this.ForgetPasswordForm.value.email
       }
@@ -48,12 +48,7 @@ export class ForgetPasswordComponent implements OnInit {
           this.openSnackBar('Password reset link has been sent to your Email', 1000);
         },
         error => {
-          if (error['status'] == 0) {
-            this.openSnackBar('Sending password reset link failed: Server offline', 1000);
-          }
-          else {
-            this.openSnackBar('Sending password reset link failed ', 1000);
-          }
+            this.openSnackBar('Sending password reset link failed: Server offline', 1000);  
         });
     }
   }
@@ -75,6 +70,5 @@ export class ForgetPasswordComponent implements OnInit {
 
   //   }
   // }
-
 
 }

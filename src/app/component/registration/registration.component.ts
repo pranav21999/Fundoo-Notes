@@ -18,8 +18,7 @@ export class RegistrationComponent implements OnInit {
   submitted = false;
 
   hide: boolean = false;
-
-  constructor(private fb: FormBuilder, private user: UserService, public snackBar: MatSnackBar) { }
+  constructor(private fb: FormBuilder, private user: UserService, public snackBar: MatSnackBar, ) { }
   //validations for form fields
   ngOnInit(): void {
     this.RegistrationForm = this.fb.group({
@@ -49,14 +48,17 @@ export class RegistrationComponent implements OnInit {
         "password": this.RegistrationForm.controls.password.value,
         "service": this.RegistrationForm.controls.service.value
       }
+
       this.user.register(data).subscribe(response => {
         console.log(response);
         this.snackBar.open("Registered!!!", " ", { duration: 2000 });
-      },
+      },      
        error => {
         console.log("error in Registration", error);
         this.snackBar.open("Registration Failed!!", " ", { duration: 2000 });
-             });
+         });
+
+
       // console.log(data);
       // if (!this.RegistrationForm.valid) {
       //   return;

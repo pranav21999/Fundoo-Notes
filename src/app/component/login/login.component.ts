@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
           (response: any) => {
             localStorage.setItem('Token', response['id']);
             console.log(response);
-            this.route.navigate(['home']);
+            // this.route.navigate(['home']);
           }
           
         );
