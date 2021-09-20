@@ -14,10 +14,10 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
   Post(url: any, data: any, token: any, headers: boolean){
-    this.token = localStorage.getItem('Token');
+    // this.token = localStorage.getItem('Token');
     let options = {
       headers: new HttpHeaders({
-        'Authorization': this.token,
+        // 'Authorization': this.token,
         'Content-Type': 'application/json'
       })
     }

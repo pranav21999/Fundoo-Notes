@@ -3,36 +3,28 @@
         <div class="toolbar" style="display: flex">
 
             <button mat-icon-button (click)="toggleSidebar()">
-            <!-- <button mat-icon-button (click)="  isExpandable=!isExpandable "> -->
                 <mat-icon>menu</mat-icon>
             </button>
-           
+
             <div class="image">
                 <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="">
-                <!-- <div>
-                    <span class="color-fundoo-F" style="color:#4285F4">F</span>
-                    <span class="color-fundoo" style="color:#4285F4">un</span>
-                    <span class="color-fundoo" style="color:#EA4335">doo</span>
-                    <span class="color-fundoo" style="color:#FBBC05">n</span>
-                    <span class="color-fundoo" style="color:#4285F4">o</span>
-                    <span class="color-fundoo" style="color:#34A853">t</span>
-                    <span class="color-fundoo" style="color:#EA4335">e</span>
-                    <span class="color-fundoo" style="color:#4285F4">s</span>
-                </div> -->
                 <div class="fundoo">
                     <div class="Project" *ngFor="let fontcolor of fontcolors,let i=index">
                         <h1 class="projectName" [style]=fontcolor>{{fonttexts[i]}}</h1>
                     </div>
                 </div>
-
             </div>
+        </div>
+
+        <div class="toolbar" id="responsive-toolbar">
+            <input class="search-input" type="text" placeholder="Search" />
         </div>
 
         <div class="searchbar">
             <button mat-icon-button>
                 <mat-icon>search</mat-icon>
             </button>
-            <input type="text" placeholder="Search" />
+            <input class="search-input" type="text" placeholder="Search" />
         </div>
         <div class="refresh" style="display: flex; align-items: center">
             <button mat-icon-button>
@@ -44,25 +36,22 @@
             <button mat-icon-button>
                 <mat-icon class="settings_outline">settings_outline</mat-icon>
             </button>
-            <button mat-icon-button style="margin-left: 20px">
+            <button id="mat-button" mat-icon-button style="margin-left: 20px">
                 <mat-icon>apps</mat-icon>
             </button>
 
-            <div fxLayout="row"  fxLayoutAlign="space-around" ngClass="log-out-icon">
-                <button mat-mini-fab color="" matTooltip="Log Out" mat-icon-button [matMenuTriggerFor]="profile" >
-                    
-             <img class="gb_Ca gbii" src="https://lh3.googleusercontent.com/ogw/ADea4I5ocYwSe5oKdqgMaxzoPIH9vy2iE3K52uZqeRPa=s32-c-mo" srcset="https://lh3.googleusercontent.com/ogw/ADea4I5ocYwSe5oKdqgMaxzoPIH9vy2iE3K52uZqeRPa=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/ADea4I5ocYwSe5oKdqgMaxzoPIH9vy2iE3K52uZqeRPa=s64-c-mo 2x " alt="" aria-hidden="true" data-noaft=mat-icon>
+            <div fxLayout="row" fxLayoutAlign="space-around" ngClass="log-out-icon">
+                <button mat-mini-fab color="" matTooltip="Log Out" mat-icon-button [matMenuTriggerFor]="profile">
+
+                    <img class="gb_Ca gbii"
+                        src="https://lh3.googleusercontent.com/ogw/ADea4I5ocYwSe5oKdqgMaxzoPIH9vy2iE3K52uZqeRPa=s32-c-mo"
+                        srcset="https://lh3.googleusercontent.com/ogw/ADea4I5ocYwSe5oKdqgMaxzoPIH9vy2iE3K52uZqeRPa=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/ADea4I5ocYwSe5oKdqgMaxzoPIH9vy2iE3K52uZqeRPa=s64-c-mo 2x "
+                        alt="" aria-hidden="true" data-noaft=mat-icon>
                 </button>
 
                 <mat-menu #profile="matMenu">
 
                     <mat-card-header>
-                        <!-- <img mat-card-avatar
-                         src="https://lh3.googleusercontent.com/ogw/ADea4I5ocYwSe5oKdqgMaxzoPIH9vy2iE3K52uZqeRPa=s32-c-mo"
-                            class="img2" style="margin-left: 35px;">  -->
-
-                        <!-- <mat-card-title><strong>{{userName}}</strong></mat-card-title>
-                              <mat-card-subtitle>{{userEmail}}</mat-card-subtitle> -->
                     </mat-card-header>
 
                     <button class="profile-button" mat-button (click)=logout() style="margin-left: 18px;">

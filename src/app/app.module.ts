@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { LoginComponent } from './component/login/login.component';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
+// import { MatIconModule } from '@angular/material/icon';
+// import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
@@ -24,13 +24,18 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list'; 
+import {MatListModule} from '@angular/material/list';
+import { NotesComponent } from './component/notes/notes.component';
+import { RemindersComponent } from './component/reminders/reminders.component';
+import { EditlabelsComponent } from './component/editlabels/editlabels.component';
+import { ArchiveComponent } from './component/archive/archive.component';
+import { TrashComponent } from './component/trash/trash.component'; 
 // const appRoutes:Routes = [  
   // { path: "login", component: LoginComponent } ,
   // { path: "registration", component: RegistrationComponent } 
 
 // ];
-
+import {MaterialModule} from './material/material.module';
 
 
 @NgModule({
@@ -41,14 +46,20 @@ import {MatListModule} from '@angular/material/list';
     ForgetPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
+    NotesComponent,
+    RemindersComponent,
+    EditlabelsComponent,
+    ArchiveComponent,
+    TrashComponent,
   ],
   imports: [
+    MaterialModule,
     MatListModule,
     BrowserModule,
     MatMenuModule,
     AppRoutingModule,
-    MatIconModule,
-    MatInputModule,
+    // MatIconModule,
+    // MatInputModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatCheckboxModule,

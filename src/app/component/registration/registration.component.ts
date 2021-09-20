@@ -23,9 +23,10 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
     this.RegistrationForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
       lastName: ['', [Validators.required, Validators.minLength(3)]],
-      firstName: ['', [Validators.required, Validators.minLength(3)]], 
+      firstName: ['', [Validators.required, Validators.minLength(3)]],
+      confirmpassword: ['', [Validators.required, Validators.minLength(6)]], 
       service: ['advance', Validators.required]
     })
   }
@@ -46,6 +47,7 @@ export class RegistrationComponent implements OnInit {
         "lastName": this.RegistrationForm.controls.firstName.value,
         "firstName": this.RegistrationForm.controls.lastName.value,
         "password": this.RegistrationForm.controls.password.value,
+        "confirmpassword": this.RegistrationForm.controls.confirmpassword.value,
         "service": this.RegistrationForm.controls.service.value
       }
 
@@ -54,7 +56,7 @@ export class RegistrationComponent implements OnInit {
         this.snackBar.open("Registered!!!", " ", { duration: 2000 });
       },      
        error => {
-        console.log("error in Registration", error);
+       console.log("error in Registration", error);
         this.snackBar.open("Registration Failed!!", " ", { duration: 2000 });
          });
 

@@ -9,14 +9,12 @@ import { HttpService } from './http.service';
 export class UserService {
 
   constructor(private httpService: HttpService) { }
+
+  //return http sergvice to register component
   register(data: any) {
     console.log("given data is", data);
     return this.httpService.Post("/user/userSignUp", data, null, false);
   }
-  // login(data: any) {
-  //   console.log("given data is", data);
-  //   return this.httpService.Post("/user/login", data, null, false);
-  // }
 
   login(data: any) {
     console.log("given data is", data);
