@@ -10,12 +10,13 @@ export class UserService {
 
   constructor(private httpService: HttpService) { }
 
-  //return http sergvice to register component
+  //return http service to register component
   register(data: any) {
     console.log("given data is", data);
     return this.httpService.Post("/user/userSignUp", data, null, false);
   }
 
+    //return http service to login component
   login(data: any) {
     console.log("given data is", data);
     return this.httpService.Post("/user/login", data, null, false);

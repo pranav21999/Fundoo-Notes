@@ -49,6 +49,8 @@ export class LoginComponent implements OnInit {
         email: this.loginForm.value.email,
         password: this.loginForm.value.password,
       }
+
+      //passing data in local stroage
       this.user.login(reqData).subscribe
         (
           (response: any) => {
