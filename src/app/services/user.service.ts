@@ -27,6 +27,7 @@ export class UserService {
     console.log("given data is", data);
     return this.httpService.Post("/user/reset", data, null, false);
   }
+     //return http service to reset password
   resetpassword(token : any, data : any){
     console.log("given data is", data);
     return this.httpService.Post("/user/reset-password", data, null, false);
