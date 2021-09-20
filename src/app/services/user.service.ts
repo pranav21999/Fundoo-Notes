@@ -22,6 +22,7 @@ export class UserService {
     return this.httpService.Post("/user/login", data, null, false);
   }
 
+     //return http service to forget password
   forgetpassword(data : any){
     console.log("given data is", data);
     return this.httpService.Post("/user/reset", data, null, false);
