@@ -36,6 +36,9 @@ import { TrashComponent } from './component/trash/trash.component';
 
 // ];
 import {MaterialModule} from './material/material.module';
+import { CreatenoteComponent } from './component/createnote/createnote.component';
+import { FormsModule } from '@angular/forms';
+import { DisplaynoteComponent } from './component/displaynote/displaynote.component';
 
 
 @NgModule({
@@ -51,15 +54,16 @@ import {MaterialModule} from './material/material.module';
     EditlabelsComponent,
     ArchiveComponent,
     TrashComponent,
+    CreatenoteComponent,
+    DisplaynoteComponent,
   ],
   imports: [
+    FormsModule,
     MaterialModule,
     MatListModule,
     BrowserModule,
     MatMenuModule,
     AppRoutingModule,
-    // MatIconModule,
-    // MatInputModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatCheckboxModule,
