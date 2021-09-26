@@ -13,6 +13,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class NoteService {
   private refresh = new Subject<void>();
+  
 token:any;  
   constructor(private http: HttpService) { 
     this.token=localStorage.getItem('Token');
@@ -36,6 +37,29 @@ token:any;
       })
     };
     return this.http.postService('/notes/addNotes',data, true, httpAuthOptions);
+  }
+
+  getAllNotes(): Observable<any> {
+    console.log(this.token);
+    
+    let httpAuthOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    };
+    return this.http.getService('/notes/getNotesList', true, httpAuthOptions);
+  }
+
+  updateNoteService(data:any){
+    let httpAuthOptions = {
+      headers:new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization': this.token
+      })
+    };
+    return this.http.postService(this.url + '/notes/updateNotes',data, true, httpAuthOptions);
+
   }
 
 }

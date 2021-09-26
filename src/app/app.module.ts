@@ -39,6 +39,8 @@ import {MaterialModule} from './material/material.module';
 import { CreatenoteComponent } from './component/createnote/createnote.component';
 import { FormsModule } from '@angular/forms';
 import { DisplaynoteComponent } from './component/displaynote/displaynote.component';
+import { IconsComponent } from './component/icons/icons.component';
+import { UpdatenoteComponent } from './component/updatenote/updatenote.component';
 
 
 @NgModule({
@@ -56,6 +58,8 @@ import { DisplaynoteComponent } from './component/displaynote/displaynote.compon
     TrashComponent,
     CreatenoteComponent,
     DisplaynoteComponent,
+    IconsComponent,
+    UpdatenoteComponent,
   ],
   imports: [
     FormsModule,

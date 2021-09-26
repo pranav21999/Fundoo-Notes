@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NoteService } from 'src/app/services/note.service';
 import { ActivatedRoute } from '@angular/router';
-import {  Output } from '@angular/core';
-// import { EventEmitter } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserService }  from 'src/app/services/user.service'
+
 
 @Component({
   selector: 'app-createnote',
@@ -21,7 +22,7 @@ export class CreatenoteComponent implements OnInit {
   this.isOpen = true;
  }
 
-  constructor(private note: NoteService, private activeRoute: ActivatedRoute) { }
+  constructor(private userservice:UserService,private note: NoteService, private activeRoute: ActivatedRoute,public snackBar: MatSnackBar,) { }
  
 
   ngOnInit(): void {
@@ -32,7 +33,7 @@ export class CreatenoteComponent implements OnInit {
       title: this.title,
       description: this.description,
     }
-    console.log(data)
+    console.log(data);
     this.token = localStorage.getItem('Token');
     console.log(" add note data ", this.token);
     if (this.title && this.description) {
@@ -46,13 +47,15 @@ export class CreatenoteComponent implements OnInit {
     
         this.fullEdit = false;
             
-      }, error => {
-        console.log("error in register", error);
+      }
+      , error => {
+        console.log("error in registeration", error);
         
       })
     }
      else {
-      this.fullEdit = false;
+      this.snackBar.open("plese enter data!!!", " ", { duration: 2000 });
+       this.fullEdit = false;
     }
   }
 
@@ -60,5 +63,7 @@ export class CreatenoteComponent implements OnInit {
   displayFull() {
     this.fullEdit = true;
   }
+
+ 
 
 }

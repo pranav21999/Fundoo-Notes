@@ -12,7 +12,13 @@ import { TrashComponent } from './component/trash/trash.component';
 import { EditlabelsComponent } from './component/editlabels/editlabels.component';
 import { CreatenoteComponent } from './component/createnote/createnote.component';
 
-const routes: Routes = [
+// const routes: Routes = [
+  const routes: Routes = [
+    {
+      path : "",
+      redirectTo: "login",
+      pathMatch: "full"
+    },
 
   { path: "login", component: LoginComponent },
   { path: "registration", component: RegistrationComponent },

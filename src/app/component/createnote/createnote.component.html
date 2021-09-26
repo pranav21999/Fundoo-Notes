@@ -4,20 +4,19 @@
     </div>
 
     <div class="note-input" (click)=displayFull()>
-        <textarea contenteditable="true" aria-multiline="true" role="textbox" Placeholder="Take a note..."
-            class="notes-main" tabindex="0" spellcheck="true" id="description" [(ngModel)]="description"></textarea>
+        <textarea role="textbox" Placeholder="Take a note..."
+            class="notes-main"  id="description" [(ngModel)]="description"></textarea>
         <div class="img-upload" *ngIf="!fullEdit"></div>
 
     </div>
 
     <div class="card-bottom" id="bottom" *ngIf="fullEdit">
         <div class="note-prop">
-            <div class="reminder prop" role="button" matTooltip="Remind me" matTooltipClass="prop-tip"
-                matTooltipPosition='below'></div>
-            <div class="back-img prop" role="button" matTooltip="Add image" matTooltipPosition='below'></div>
-            <div class="back-color prop" role="button" matTooltip="Change color" matTooltipPosition='below'></div>
-            <div class="archive prop" role="button" matTooltip="Archive" matTooltipPosition='below'></div>
-            <div class="more-opn prop" role="button" matTooltip="More" matTooltipPosition='below'></div>
+            <div class="reminder prop" role="button" ></div>
+            <div class="back-img prop" role="button" ></div>
+            <div class="back-color prop" role="button"></div>
+            <div class="archive prop" role="button"  ></div>
+            <div class="more-opn prop" role="button" ></div>
 
             <!--<div class="">  -->
             <!-- Templete statements -->

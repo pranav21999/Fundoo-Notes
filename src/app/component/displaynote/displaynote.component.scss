@@ -1,0 +1,25 @@
+// .mat-card{
+//     border: 4px color red;
+//     width:500px;
+//     height:100px;
+//     //  background-color: cyan; 
+//     display: flex;
+//     flex-wrap: wrap;
+
+// }
+
+
+.display-cards{
+    margin: 70px;
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+.display-cards .mat-card{
+    margin-bottom: 20px;
+}
+
+.mat-card{
+ border: 1px solid red;
+ width: 240px;
+ height: 100px;
+}

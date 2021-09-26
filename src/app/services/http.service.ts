@@ -24,7 +24,7 @@ export class HttpService {
   //   return this.http.post(this.BaseUrl + url, data,options);
   // }
 
-
+  //added post service
   postService( url: string = '',payload: any = null, tokenRequired: boolean = false, httpOptions:any=null) {
     /* handles post operations
       params : id  : id of question or comment to add/post,
@@ -33,13 +33,20 @@ export class HttpService {
     return this.http.post(this.BaseUrl+url, payload, tokenRequired && httpOptions);
   }
 
-  // Get(url: any, data: any, token: any, headers: boolean)
-  // {
-  //    return this.http.get(this.BaseUrl + url, data);
-  //  }
-  
-  // Put(url: any, data: any, token: any, headers: boolean)
-  // {
-  //   return this.http.put(this.BaseUrl + url, data);
-  // }
+  getService( url: string = '' , tokenRequired: boolean = false, httpOptions:any=null) {
+    /* handles post operations
+      params : id  : id of question or comment to add/post,
+      apiendpoint : endpoint i.e 'comments/' , 'answers/', 'editquestions/'
+  */
+    return this.http.get(this.BaseUrl+url, tokenRequired && httpOptions);
+  }
+
+  PutService( url: string= '' , tokenRequired:boolean=false, httpOption:any){
+
+    return this.http.put(url,tokenRequired && httpOption);
+
+  }
+
+
 }
+  

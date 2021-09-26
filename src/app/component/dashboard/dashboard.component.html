@@ -1,3 +1,4 @@
+<!-- header -->
 <div class="main-container">
     <mat-toolbar>
         <div class="toolbar" style="display: flex">
@@ -36,7 +37,7 @@
             <button mat-icon-button>
                 <mat-icon class="settings_outline">settings_outline</mat-icon>
             </button>
-            <button id="mat-button" mat-icon-button >
+            <button id="mat-button" mat-icon-button>
                 <mat-icon>apps</mat-icon>
             </button>
 
@@ -61,13 +62,13 @@
             </div>
         </div>
     </mat-toolbar>
-
+    
 
     <mat-divider style="margin-bottom: 10px"></mat-divider>
     <mat-sidenav-container>
         <mat-sidenav mode="side" [opened]="opened">
             <div class="link">
-                <button  mat-icon-button routerLink="/dashboard/notes">  
+                <button mat-icon-button routerLink="/dashboard/notes">
                     <mat-icon>lightbulb_outline</mat-icon>
                 </button>
                 <p>Notes</p>
@@ -79,13 +80,13 @@
                 <p>Reminders</p>
             </div>
             <div>
-                <button mat-icon-button  routerLink="/dashboard/editlabels">
+                <button mat-icon-button routerLink="/dashboard/editlabels">
                     <mat-icon class="material-icons-outlined">edit</mat-icon>
                 </button>
                 <p>Edit labels</p>
             </div>
             <div>
-                <button mat-icon-button  routerLink="/dashboard/archive">
+                <button mat-icon-button routerLink="/dashboard/archive">
                     <mat-icon class="material-icons-outlined">archive_outline</mat-icon>
                 </button>
                 <p>Archive</p>

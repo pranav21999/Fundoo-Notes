@@ -45,5 +45,17 @@ export class UserService {
     return this.httpService.postService("/user/reset-password", data, false, false);
   }
 
+// logout(id : any) {
+//   let option={
+//     Headers:new HttpHeaders({
+//       'Authorization' : id,
+//       'content-type': 'application/json',
+//       'Accept' : 'application/json'
+//     }) 
+//   }
+//   return this.httpService.postService('notes/logout',option);
+//   // return localStorage.removeItem('token');
+// }
+
   
 }
