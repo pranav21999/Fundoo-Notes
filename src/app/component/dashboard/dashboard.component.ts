@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   toggleSidebar(){
     this.opened = !this.opened;
   }
+  // redirect to logout
   logout() {
     sessionStorage.clear();
     localStorage.clear();
